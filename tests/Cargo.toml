@@ -1,0 +1,21 @@
+[package]
+name = "tests"
+description = "ERC20 tests"
+version = "0.1.0"
+authors = ["FriendlyMarket <team@friendly.market>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+casper-contract = { version = "=1.4.4", default-features = false, features = ["test-support"] }
+casper-types = "=1.5.0"
+casper-engine-test-support = { version = "=2.2.0", features = ["test-support"] }
+casper-execution-engine = { version = "=2.0.0", features = ["test-support"] }
+hex = "0.4.3"
+rand = "0.7"
+blake2 = "0.9.2"
+base64 = { version = "0.13.0", default-features = false, features = ["alloc"] }
+
+[features]
+default = ["casper-contract/std", "casper-types/std", "casper-contract/test-support"]
